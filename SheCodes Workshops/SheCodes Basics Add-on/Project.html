@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>My Hobby</title>
+	</head>
+	<style>
+		body {
+			background: radial-gradient(
+				circle at 10% 20%,
+				rgb(248, 219, 219) 0%,
+				rgb(229, 248, 250) 90%
+			);
+			background-repeat: no-repeat;
+		}
+		h1 {
+			text-align: center;
+		}
+		h2 {
+			text-align: center;
+		}
+		img {
+			max-width: 100%;
+			height: 150px;
+		}
+		p {
+			font-size: 18px;
+			line-height: 1.2;
+		}
+		.container {
+			margin: 20px auto;
+			max-width: 600px;
+			background: white;
+			padding: 20px;
+			border-radius: 10px;
+		}
+		button {
+			display: block;
+			margin: 0 auto;
+			border-radius: 6px;
+			border: 1px solid plum;
+			background: white;
+			font-size: 20px;
+			padding: 10px 15px;
+			transition: all 150ms ease-in-out;
+		}
+		button:hover {
+			background: plum;
+			cursor: pointer;
+		}
+		footer {
+			text-align: center;
+			margin: 10px 0;
+			font-size: 18px;
+		}
+		.theme-button {
+			font-size: 14px;
+			background: rgb(226, 194, 226);
+			color: black;
+			padding: 5px 8px;
+		}
+		.theme-button:hover {
+			color: black;
+			background: white;
+		}
+		.intro-picture {
+			display: block;
+			margin: 0 auto;
+			height: 300px;
+			width: 400px;
+			padding: 20px auto 20px;
+			border-radius: 6px;
+			transition: all 150ms ease-in-out, filter 2000ms;
+		}
+		.intro-picture:hover {
+			filter: contrast(80%);
+			transform: scale(1.1);
+		}
+		.image-gallery {
+			margin: 10px 0;
+			padding: 15px 0;
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			grid-gap: 10px;
+		}
+		.image-gallery img {
+			width: 100%;
+			border-radius: 6px;
+			object-fit: cover;
+			transition: all 150ms ease-in-out;
+		}
+		.image-gallery img:hover {
+			transform: scale(1.2);
+		}
+		.dark {
+			background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+			color: white;
+		}
+		.dark .container {
+			background: rgba(255, 255, 255, 0.1);
+		}
+		.dark a {
+			color: plum;
+		}
+	</style>
+	<body>
+		<button class="theme-button">Change Theme</button>
+		<div class="container">
+			<h1>Painting</h1>
+			<h2>A colourful world</h2>
+			<a
+				href="https://en.wikipedia.org/wiki/Painting"
+				target="_blank">
+				<img
+					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/325/original/victoria-bilsborough-U-ouhtPgHH4-unsplash.jpg?1685131472"
+					alt=""
+					class="intro-picture" />
+			</a>
+			<div class="image-gallery">
+				<img
+					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/324/original/pure-julia-AEyF9_rKY34-unsplash.jpg?1685131451"
+					alt="" />
+				<img
+					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/323/original/rhondak-native-florida-folk-artist-_Yc7OtfFn-0-unsplash.jpg?1685131439"
+					alt="" />
+				<img
+					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/322/original/lucas-george-wendt-YCOuaFfQDno-unsplash.jpg?1685131424"
+					alt="" />
+				<img
+					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/321/original/laura-adai-s6U7Gq93UU8-unsplash.jpg?1685131412"
+					alt="" />
+				<!-- <img
+					src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/083/319/original/kelly-sikkema-eBo-8_0i5ic-unsplash.jpg?1685131388"
+					alt="" /> -->
+			</div>
+			<p>
+				Painting is an important form of visual art, bringing in elements such
+				as drawing, composition, gesture, narration, and abstraction. Paintings
+				can be naturalistic and representational , photographic, abstract,
+				narrative, symbolistic , emotive or political in nature.
+				<br />
+				<a
+					href="https://en.wikipedia.org/wiki/Painting"
+					target="_blank">
+					Learn more on Wikipedia</a
+				>
+			</p>
+			<button class="learnPaintButton">Learn to Paint!</button>
+		</div>
+		<footer>Coded with &#x1FAF6; by Ramya.</footer>
+		<script>
+			function askQuestions() {
+				let paintingForm = prompt(
+					"What form of painting are you interested in?"
+				);
+				let email = prompt("Where can we email you the details?");
+				alert(
+					`Cool! We'll be in touch soon with details about learning ${paintingForm}`
+				);
+			}
+			let learnButton = document.querySelector(".learnPaintButton");
+			learnButton.addEventListener("click", askQuestions);
+
+			function changeTheme() {
+				let body = document.querySelector("body");
+				/* if (body.classList.contains("dark")) {
+					body.classList.remove("dark");
+				} else {
+					body.classList.add("dark");
+				} */
+				body.classList.toggle("dark");
+			}
+			let themeButton = document.querySelector(".theme-button");
+			themeButton.addEventListener("click", changeTheme);
+		</script>
+	</body>
+</html>

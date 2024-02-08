@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>&#x1F4DA; My Passions</title>
+		<style>
+			.content {
+				display: block;
+				align-self: center;
+				max-width: 600px;
+				margin: 0 auto;
+				padding: 60px;
+				width: 800px;
+				background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
+				border-radius: 10px;
+				font-family: fantasy;
+			}
+			h1 {
+				text-align: center;
+				text-decoration: underline;
+				font-size: 40px;
+				font-weight: 600;
+			}
+			h2 {
+				text-align: center;
+				border: 1px solid;
+				border-radius: 5px;
+				margin: 15px auto 15px;
+				padding: 15px 25px 5px;
+				font-size: 24px;
+			}
+			.introduction {
+				line-height: 1.5;
+				font-size: 14px;
+				font-family: Arial, Helvetica, sans-serif;
+				margin: 15px 25px 15px;
+				padding: 15px auto 15px;
+				text-align: justify;
+				text-justify: inter-word;
+			}
+			img {
+				display: block;
+				margin: 15px 25px 15px;
+				padding: 15px auto 15px;
+				max-width: 85%;
+				border-radius: 10px;
+			}
+			a {
+				margin: 15px 25px 15px;
+				padding: 15px auto 15px;
+				font-size: 16px;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			button {
+				display: block;
+				margin: 0 auto;
+				padding: 10px 20px auto 20px;
+				font-size: 18px;
+				border-radius: 16px;
+				box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+				background: #fae3d9;
+				border-width: 1.5px;
+			}
+			button:hover {
+				cursor: pointer;
+				background: #885df1;
+				color: white;
+				transition: all 200ms ease-in-out;
+			}
+			.footer {
+				text-align: center;
+				font-family: fantasy;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- h1, h2, p, div, span, strong, em, br, hr, a, img, button -->
+		<div class="content">
+			<h1>📖 Book Reading &#128214;</h1>
+			<h2>Transport yourself into a world of imagination &#x1F4AD;</h2>
+			<p class="introduction">
+				<strong>Book reading</strong> is a hobby I enjoy the most. It takes us
+				into my world of imagination where anything is possible and one gets to
+				spend time with the wizards and dragons or vampires and warewolves! We
+				are just a page away from riding the imagination train and get on an
+				adventure and maybe discover/rediscover oneself! <br /><br />
+				One way of sharing the experience of a book is through a book club,
+				where a group of people who meet to discuss a book or books that they
+				have read and express their opinions, likes, dislikes, etc. Book clubs
+				can be found at your local libraries, local bookstores and also online
+				forums, etc.
+				<br />
+				Want to know what some of the best books of 2022 are? Check this link.
+			</p>
+			<a
+				href="https://www.goodreads.com/choiceawards/best-books-2022"
+				target="_blank">
+				<strong><em> Goodreads best books: 2022 </em></strong>
+			</a>
+			<br />
+			<img
+				src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/081/516/original/the-power-of-reading-1024x576.jpeg?1683844506"
+				alt="book-reading" />
+
+			<button>&#x1F449; Buy Books</button>
+			<hr />
+			<span class="footer">
+				<p>This page is created by Ramya</p>
+			</span>
+		</div>
+		<script>
+			/* function checkEligibility() {
+				let firstName = prompt("What's your first name?");
+				if (canApply()) {
+					updateHeading(`Hi, " ${firstName} "! Welcome to SheCodes!`);
+				} else {
+					updateHeading(`Sorry, " ${firstName} "! You cannot join SheCodes!`);
+				}
+			}
+			function canApply() {
+				let age = prompt("What's your age?");
+				return age >= 18;
+			}
+			function updateHeading(newgreeting) {
+				let heading = document.querySelector("h1");
+				heading.innerHTML = newgreeting;
+			} */
+			function isReading() {
+				let name = prompt("What's your name?");
+				if (readingStatus()) {
+					alert(`Enjoy your book ${name}!`);
+				} else {
+					alert(`Pick up a book now ${name}!`);
+				}
+			}
+
+			function readingStatus() {
+				let answer = prompt("Are you currently reading a book? (Yes/No)");
+				if (answer.toLowerCase() === "yes") {
+					return true;
+				} else {
+					return false;
+				}
+			}
+
+			let button = document.querySelector("button");
+			button.addEventListener("click", isReading);
+		</script>
+	</body>
+</html>
