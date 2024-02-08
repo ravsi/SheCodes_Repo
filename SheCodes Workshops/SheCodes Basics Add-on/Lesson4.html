@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=<device-width>, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				height: 100%;
+				width: 100%;
+				margin: 0;
+			}
+			.theme {
+				background: white;
+				width: 1000px;
+				height: 1000px;
+			}
+			.dark {
+				background: black;
+				width: 1000px;
+				height: 1000px;
+			}
+			.changeButton {
+				font-size: 20px;
+			}
+			.changeButtonDark {
+				background-color: white;
+				color: black;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="theme">
+			<button class="changeButton">Dark Theme</button>
+		</div>
+		<script>
+			function changeBackground() {
+				let theme = document.querySelector(".theme");
+				theme.classList.add("dark");
+				button.classList.add("changeButtonDark");
+			}
+			let button = document.querySelector(".changeButton");
+			button.addEventListener("click", changeBackground);
+		</script>
+	</body>
+</html>

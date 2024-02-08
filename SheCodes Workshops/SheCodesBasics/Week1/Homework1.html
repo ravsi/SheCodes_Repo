@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			http-equiv="X-UA-Compatible"
+			content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0" />
+		<title>Weather App</title>
+		<style>
+			.weather {
+				display: block;
+				text-align: center;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+			.weather-icon {
+				display: block;
+				text-align: center;
+				font-size: 40px;
+			}
+			.title {
+				text-align: center;
+				color: #1a64d6;
+				margin: auto auto 0px auto;
+			}
+			.today {
+				padding: 0px auto 50px;
+				margin: 0px auto;
+			}
+			ul {
+				list-style: none;
+				text-align: center;
+				margin: 0px 0px auto -50px;
+				padding: 0px auto 80px;
+			}
+
+			li {
+				padding-right: 50px auto 50px;
+				text-align: center;
+				margin: 30px 195px 50px;
+			}
+			li:hover {
+				background: #fffbef;
+				transition: all 200ms ease-in-out;
+			}
+			h1 {
+				margin: 10px auto 10px;
+				font-size: 34px;
+				margin: 0px 0px auto 10px;
+				padding: 50px auto 50px;
+			}
+			h2 {
+				font-size: 34px;
+				font-weight: 500;
+				margin: 10px 0px auto 0px;
+				padding: 80px auto 80px;
+			}
+			h3 {
+				font-size: 20px;
+				font-family: monospace;
+			}
+			p {
+				text-align: center;
+				padding: 0px auto;
+				margin: 18px 0px;
+				font-size: 18px;
+			}
+			button {
+				display: block;
+				align-content: center;
+				padding: 12px 20px;
+				margin: 0 auto;
+				color: #ffffff;
+				font-size: 18px;
+				background-color: #1a64d6;
+				border: 1px solid #1a64d6;
+				border-radius: 30px;
+				box-shadow: 0px 8px 8px #25275914;
+				transition: all 200ms ease-in-out;
+			}
+
+			button:hover {
+				background-color: #ffffff;
+				padding: 12px 20px;
+				border: 1px solid #1a64d6;
+				color: #1a64d6;
+				cursor: pointer;
+			}
+			.footer {
+				color: rgb(108, 107, 107);
+				font-family: monospace;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="weather">
+			<span class="weather-icon"> &#x1F324; </span>
+			<span class="title">
+				<h1>Currently 21º in Tokyo</h1>
+			</span>
+			<span class="today">
+				<h2>13º /<strong> 23º</strong></h2>
+			</span>
+
+			<ul>
+				<li>
+					<h3>&#x1F327; Tomorrow</h3>
+					<p>10º / <strong>22º</strong></p>
+				</li>
+				<li>
+					<h3>&#x1F325; Saturday</h3>
+					<p>15º /<strong> 17º </strong></p>
+				</li>
+				<li>
+					<h3><!-- &#127774; -->&#x2600; Sunday</h3>
+					<p>25º / <strong>28º</strong></p>
+				</li>
+			</ul>
+		</div>
+		<button>Change city</button>
+		<p class="footer">Coded by Ramya</p>
+	</body>
+</html>
